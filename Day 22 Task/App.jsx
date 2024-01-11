@@ -4,7 +4,7 @@ import './App.css'
 
 function App() {
   const [subscriptionStatus, setSubscriptionStatus] = useState('');
-
+ {/* functions for each button to show the success message */}
   const handleSubscribeFree = () => {
     setSubscriptionStatus('Successfully Subscribed to Free Package');
   };
@@ -21,9 +21,10 @@ function App() {
 
   return (
     <>
+       {/* success texts are append here */}
     <h1 id='subscriptionStatus'> {subscriptionStatus} </h1>
     <div className='priceCard'>
-
+ {/* free subscription card */}
       <div className='free'>
         <h5>Free</h5>
         <h3>$0/month</h3>
@@ -41,6 +42,7 @@ function App() {
           </button>
 
       </div>
+      {/* plus subscription card */}
       <div className='plus'>
       <h5>Plus</h5>
         <h3>$9/month</h3>
@@ -57,6 +59,7 @@ function App() {
             {subscriptionStatus !== '' ? 'Success' : 'Subscribe'}
           </button>
       </div>
+      {/* Pro subscription card */}
       <div className='pro'>
       <h5>Pro</h5>
         <h3>$49/month</h3>
